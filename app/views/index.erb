@@ -1,1 +1,62 @@
-<h1>Home Page</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact List</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <h3>Contact List: API Edition</h3>
+  <div class="container">
+  <form id="add-contact" class="form-horizontal" method="post" action="/contacts">
+    <div class="form-group">
+      <label>Firstname</label>
+      <input id="firstname" type="text" name="firstname" placeholder="firstname">
+    </div>
+    <div class="form-group">
+      <label>Lastname</label>
+      <input id="lastname" type="text" name="lastname" placeholder="lastname">
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input id="email" type="text" name="email" placeholder="email">
+    </div>
+    <div class="form-group">
+      <label>Phone</label>
+      <input id="phone" type="text" name="phone" placeholder="phone">
+    </div>
+    <div class="form-group">
+      <button type="submit" id="btn">Submit</button>
+    </div>
+  </form>
+  <table class="table-striped table-bordered" id="all-contacts">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th> 
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </table>
+  </div>
+  <h4>Search:</h4>
+  <form method="get" action"/search/:search" id="search-form"> 
+    <input type="text" name="search" placeholder="Any Parameter">
+    <button id="search">Submit</button>
+  </form>
+  <table class="table-striped table-bordered" id="searched-contacts">
+    <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th> 
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</body>
+</html>
